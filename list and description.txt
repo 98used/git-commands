@@ -1,0 +1,51 @@
+Basic Setup
+git config --global user.name "Your Name" - Set the name that will be attached to your commits and tags.
+git config --global user.email "your_email@example.com" - Set the email that will be attached to your commits and tags.
+git config --global --list - List all settings Git can find at each level (system, global, local).
+Create Repositories
+git init - Initialize a local Git repository in the current directory.
+git clone <url> - Create a local copy of a remote repository.
+Local Changes
+git status - Check the status of changes as staged, unstaged, or uncommitted.
+git add <file> - Add a file as it looks now to your next commit (stage).
+git add . - Stage all changes in the directory for the next commit.
+git commit -m "Commit message" - Commit your staged content as a new commit snapshot.
+git diff - Show unstaged changes between your index and working directory.
+Branches & Tags
+git branch - List your branches. A * will appear next to the currently active branch.
+git branch <branch-name> - Create a new branch at the current commit.
+git checkout <branch-name> - Switch to another branch and check it out into your working directory.
+git checkout -b <new-branch> - Create a new branch and switch to it.
+git merge <branch> - Merge the specified branch’s history into the current one.
+git tag <tag-name> - Mark the current commit with a tag.
+Update & Publish
+git push <remote> <branch> - Transmit local branch commits to the remote repository branch.
+git push --tags - Push tags to remote repository.
+git pull - Fetch and integrate the remote version of the current branch.
+git fetch - Fetch all branches from the remote but not integrate into the local branches.
+Merge & Rebase
+git merge <branch> - Merge another branch into the current branch.
+git rebase <branch> - Apply any commits of current branch ahead of specified one.
+git rebase --abort - Abort a rebase.
+git rebase --continue - Continue a rebase after resolving conflicts.
+Undo
+git revert <commit> - Create a new commit that undoes all of the changes made in <commit>, then apply it to the current branch.
+git reset <file> - Unstage a staged file while retaining the changes in working directory.
+git reset --hard <commit> - Reset your HEAD pointer to a previous commit and discard all changes since then.
+git clean -f - Remove untracked files from your working directory.
+Inspection & Comparison
+git log - Display the entire commit history using the default format.
+git log --oneline - Condense each commit to a single line.
+git log --graph - Show a text-based graphical representation of the commit history.
+git log -p <file> - Display commit logs and show difference introduced in each commit for the specified file.
+git show <commit> - Show various types of objects (commits, tags, etc.), including information like the commit message, diff, and parent commits.
+Advanced Git Operations
+git stash - Stash changes in a dirty working directory.
+git stash pop - Apply stashed changes back to your working directory.
+git stash list - List all stashed changesets.
+git stash drop - Discard the most recently stashed changeset.
+Handling Remotes
+git remote add <name> <url> - Add a new remote repository.
+git remote -v - List all currently configured remotes.
+git remote show <remote> - Show information about a remote.
+git remote remove <name> - Remove a remote.
